@@ -1,6 +1,10 @@
 from django.shortcuts import render
-
-# Create your views here.
+from django.core.mail import send_mail
 
 def send(request):
-  return render(request, 'email.html')
+    send_mail('EMAIL PRUEBA DJANGO',
+              'Sirve :V',
+              'aphoccot@unsa.edu.pe',
+              ['pocochuk12345@gmail.com'],
+              fail_silently=False)
+    return render(request, 'email.html')
