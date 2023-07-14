@@ -10,7 +10,7 @@ class Class(models.Model):
     
 class Student(models.Model):
     name = models.CharField(max_length=10)
-    language = models.ForeignKey(Class, on_delete=models.CASCADE)
+    nameClass = models.ForeignKey(Class, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
