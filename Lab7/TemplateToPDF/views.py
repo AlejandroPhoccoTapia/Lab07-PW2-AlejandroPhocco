@@ -15,7 +15,7 @@ class GeneratePDF(View):
             'lab': 7,
         }
         html = template.render(context)
-        pdf = render_to_pdf('invoice.html',context)
+        pdf = render_to_pdf('pdf.html',context)
         if pdf:
             response = HttpResponse(pdf, content_type='application/pdf')
             filename = "Invoice_%s.pdf"%("12341231")
